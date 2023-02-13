@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mynavlist"
+    app:startDestination="@id/fragmentList">
+
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.example.navartlist.FragmentList"
+        android:label="FragmentList">
+        <action
+            android:id="@+id/action_fragmentList_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.example.navartlist.FragmentDetails"
+        android:label="FragmentDetails" >
+        <argument
+            android:name="key"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
